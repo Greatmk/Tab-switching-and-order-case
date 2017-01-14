@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+        	*{
+        		margin: 0;
+        		padding: 0;
+        	}
+        	div{
+        		width: 300px;
+        		height: 300px;
+        		background-color: blue;
+        		position: absolute;
+        	}
+        	#two{
+        		margin: 100px;
+        		background-color: pink;
+        	}
+        	#three{
+        		margin: 200px;
+        		background-color: purple;
+        	}
+        </style>
+    </head>
+    <body>
+    	<div id="one"></div>
+    	<div id="two"></div>
+    	<div id="three"></div>
+
+    	<script>
+    		var divs = document.getElementsByTagName('div');
+
+    		var zIndex = 1;
+    		for(var i=0; i<divs.length; i++){
+    			divs[i].onclick = function(){
+    				this.style.zIndex = zIndex;
+    				zIndex++;
+    			}
+    		}
+    	</script>
+    </body>
+</html>

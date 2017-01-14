@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+	    <input type="text"><br>
+		<input type="text"><br>
+		<input type="text"><br>
+		<input type="text"><br>
+		<input type="text"><br>
+		<input type="text"><br>
+		<input type="text"><br>
+		<input type="text"><br>
+		<input type="text"><br>
+		<input type="text"><br>
+
+		<script>
+			var inputs = document.getElementsByTagName('input');
+			for(var i =0; i<inputs.length; i++){
+
+				inputs[i].onfocus = function(){
+					this.style.backgroundColor = 'skyblue';
+				}
+
+				inputs[i].onblur = function(){
+					this.style.backgroundColor = '';
+				}
+
+
+
+			}
+		</script>
+    </body>
+</html>

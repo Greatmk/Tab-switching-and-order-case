@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+        	.warn{
+        		background-color: red;
+        	}
+        </style>
+    </head>
+    <body>
+    	用户名：<input type="text" id="username"><br/><br/>
+		密  码：<input type="text" id="password"><br/><br/>
+		<input type="button" value="注  册" id="btn">
+
+		<script>
+			var username = document.getElementById('username');
+			var btn = document.getElementById('btn');
+
+			btn.onclick = function(){
+				if(username.value.length < 4 || username.value.length > 8){
+						alert('用户名不合法！');
+						username.className = 'warn';
+				}else{
+					alert('用户名合法！');
+					username.className = ' ';
+				}
+			}
+		</script>
+    </body>
+</html>

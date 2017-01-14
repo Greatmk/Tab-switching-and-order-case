@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    	<input type="button" value="翻牌" id="btn">
+    	<select  id="beauty">
+    		<option value="小明">小明</option>
+    		<option value="小张">小张</option>
+    		<option value="小红">小红</option>
+    		<option value="小李" id="xl">小李</option>
+    		<option value="小王">小王</option>
+    		<option value="小方">小方</option>
+    		<option value="小解">小解</option>
+    	</select>
+
+    	<script>
+    		var btn = document.getElementById('btn');
+    		var xl = document.getElementById('xl');
+
+    		btn.onclick = function(){
+    			xl.selected = true;
+    		}
+
+
+
+    	</script>
+
+    </body>
+</html>

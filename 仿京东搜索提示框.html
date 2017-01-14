@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    	<input type="text" value="男士皮鞋" id="txt">
+    	<input type="button" value="搜索" id="btn">
+    	<script>
+    		var txt = document.getElementById('txt');
+
+    		txt.onfocus = function(){
+    			if(this.value == '男士皮鞋'){
+    				this.value = ' ';
+    			}
+    		}
+
+    		txt.onblur = function(){
+    			if(this.value == ' '){
+    				this.value = '男士皮鞋';
+    			}
+    		}
+    	</script>
+    </body>
+</html>

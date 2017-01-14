@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    	<div id="box">
+		    <input type="text"/><br/>
+		    <input type="text"/><br/>
+		    <input type="text"/><br/>
+		    <input type="text"/><br/>
+		    <input type="text"/><br/>
+		    <input type="text"/><br/>
+		    <input type="text"/><br/>
+		    <input type="text"/><br/>
+		    <input type="text"/><br/>
+		    <input type="text"/><br/>
+		</div>
+		<input type="button" value="赋值" id="btn1"/>
+		<input type="button" value="取值" id="btn2"/>
+
+		<script>
+			var btn1 = document.getElementById('btn1');
+			var btn2 = document.getElementById('btn2');
+			var box = document.getElementById('box');
+			var inputs = document.getElementsByTagName('input');
+
+
+			btn1.onclick = function(){
+				for(var i=0; i<inputs.length; i++){
+					var input = inputs[i];
+					if(input.type == 'text'){
+						input.value = i + 1;
+					}
+				}
+			}
+
+			btn2.onclick = function(){
+				var str = '';
+				for(var i=0; i<inputs.length; i++){
+					var input = inputs[i];
+					if(input.type == 'text'){
+						str += input.value + ',';
+						
+					}
+				}
+
+				console.log(str);
+
+			}
+
+		</script>
+    </body>
+</html>

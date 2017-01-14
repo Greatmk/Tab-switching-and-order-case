@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+<input type="button" value="按钮"/>
+
+
+<script>
+    var inputs = document.getElementsByTagName('input');
+    for(var i=0; i<inputs.length; i++){
+    	var input = inputs[i];
+    	input.onclick = function(){
+    		for(var i=0; i<inputs.length; i++){
+    			inputs[i].className = ' ';
+    		}
+    		this.className = 'red';
+    		//this.setAttribute('class','red');
+    	}
+    }
+</script>
+</body>
+</html>
